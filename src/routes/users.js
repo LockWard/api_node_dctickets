@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+import { SignUp } from '../controllers/users.controllers';
+
 /* GET users listing. */
 /* USER */
 router.get('/users', function(req, res, next) {

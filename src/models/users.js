@@ -43,6 +43,8 @@ const users = DataTypes.define('users', {
             key: 'id_department'
         }
     }
+},{
+    timestamps: false,
 });
 
 export default users;

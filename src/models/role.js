@@ -13,6 +13,8 @@ const role = sequelize.define('role', {
         defaultValue: 'usuario',
         allowNull: false
     }
+},{
+    timestamps: false,
 });
 
 export default role;

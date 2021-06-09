@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize';
 import { DataTypes } from '../database/key.js';
+import users from '../models/users.js';
 
 const department = DataTypes.define('department', {
     id_department: {
@@ -19,7 +20,10 @@ const department = DataTypes.define('department', {
         allowNull: false
     }
 },{
-
+    timestamps: false,
 });
+
+department.hasMany(users, {foreignKey: 'id_user', sourceKey: 'id'});
+users.belongsTo(department, {foreignKey: 'id_department', sourceKey: 'id'});
 
 export default department;

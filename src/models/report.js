@@ -36,6 +36,8 @@ const report = DataTypes.define('report', {
             key: 'id_user'
         }
     }
+},{
+    timestamps: false,
 });
 
 export default report;
